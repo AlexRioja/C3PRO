@@ -6,6 +6,7 @@ import time
 pca = ServoKit(channels=16)
 pca.frequency=60
 #TODO servo.fraction(value), valor entre 0 y 1 para la anchura de los pulsos, probar a ver si rebaja la velocidad
+#TODO ver si se puede sacar la posición(angulo) actual de un motor accediendo a pca.servo[x].angle
 def initial_position(speed=1,part="whole"):
     """Restores initial position
 
