@@ -5,11 +5,12 @@ import time
 
 pca = ServoKit(channels=16)
 pca.frequency=60
-
-def initial_position(part="whole"):
+#TODO servo.fraction(value), valor entre 0 y 1 para la anchura de los pulsos, probar a ver si rebaja la velocidad
+def initial_position(speed=1,part="whole"):
     """Restores initial position
 
     Args:
+        speed (Double): In range (0-1) specifies the speed of the movement
         part (String): Can be "back" or "front" or leave empty for restoring the whole position 
     """
     if part == "back":        
